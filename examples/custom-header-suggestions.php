@@ -25,11 +25,11 @@ function wctrn_advanced_theme_custom_header_setup() {
     add_theme_support( 'custom-header', $defaults );
 
     register_default_headers( array(
-		'default-image' => array(
-			'url'           => '%s/images//default-header-image.jpg',
-			'thumbnail_url' => '%s/images//default-header-image.jpg',
-			'description'   => __( 'Immagine di default per il tema', 'wctrn_advanced_theme' ),
-		),
-	) );
+    	'default-image' => array(
+    		'url'           => '%s/images//default-header-image.jpg',
+    		'thumbnail_url' => '%s/images//default-header-image.jpg',
+    		'description'   => __( 'Immagine di default per il tema', 'wctrn_advanced_theme' ),
+    	),
+    ) );
 }
 add_action( 'after_setup_theme', 'wctrn_advanced_theme_custom_header_setup' );

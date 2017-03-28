@@ -21,8 +21,10 @@
 function wctrn_advanced_theme_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'wctrn_advanced_theme_custom_header_args', array(
 		'default-image'          => '',
+		'header-text' => false,
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
+		'flex-width'			 => true,
+		'width'                  => 2000,
 		'height'                 => 250,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'wctrn_advanced_theme_header_style',
