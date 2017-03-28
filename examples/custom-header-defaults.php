@@ -10,7 +10,7 @@
  */
 function wctrn_advanced_theme_custom_header_setup() {
     $defaults = array(
-        'default-image' => get_parent_theme_file_uri( '/assets/images/header.jpg' ), // Immagine di default da mostrare
+        'default-image' => get_parent_theme_file_uri( '/images/default-header-image.jpg' ), // Immagine di default da mostrare
         'header-text' => false, // Decidi se far mostrare o meno il testo sopra l'immagine
         'default-text-color' => '000', // Il colore di default del testo
         'width' => 1000, // Larghezza dell'immagine (in pixels)
