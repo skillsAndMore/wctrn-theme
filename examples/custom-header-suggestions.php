@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Funzione e azione per dichiarare il supporto ai Custom Header con spiegazioni in linea di ogni parametro
+ * Funzione e azione per dichiarare il supporto ai Custom Header e aggiunge i suggerimenti per le immagini da usare
  *
- * Questa funzione serve soltanto per scopi didattici dato che molte delle informazioni che trovi al suo interno vengono sostituite
- * dai valori di default che vengono presentati all'interno del Codex.
+ * Oltre all'aggiunta del supporto al Custom Header in questo blocco di codice puoi scoprire la funzione `register_default_headers()`
+ * che ti permette di aggiungere una serie di immagini di default da utilizzare per il tuo tema.
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/ Pagina del Theme Handbook dove viene descritta la funzionalità
  */
@@ -21,6 +21,15 @@ function wctrn_advanced_theme_custom_header_setup() {
         'admin-head-callback' => 'adminhead_cb', //  Funzione di callback che deve essere chiamata nel <head> della schermata Personalizza
         'admin-preview-callback' => 'adminpreview_cb', // Funzione che produce il codice necessario per mostrare l'immagine nella schermata Personalizza
     );
-add_theme_support( 'custom-header', $defaults );
+
+    add_theme_support( 'custom-header', $defaults );
+
+    register_default_headers( array(
+		'default-image' => array(
+			'url'           => '%s/images//default-header-image.jpg',
+			'thumbnail_url' => '%s/images//default-header-image.jpg',
+			'description'   => __( 'Immagine di default per il tema', 'wctrn_advanced_theme' ),
+		),
+	) );
 }
 add_action( 'after_setup_theme', 'wctrn_advanced_theme_custom_header_setup' );

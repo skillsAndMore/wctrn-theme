@@ -14,7 +14,8 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @example examples/custom-header-defaults.php Esempio di codice per definire un custom header con spiegazioni
+ * @example examples/custom-header-defaults.php Esempio di codice per definire un Custom Header con spiegazioni
+ * @example examples/custom-header-suggestions.php Esempio di codice per suggerire un immagini per il Custom Header
  * @uses wctrn_advanced_theme_header_style()
  */
 function wctrn_advanced_theme_custom_header_setup() {
