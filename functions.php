@@ -102,12 +102,15 @@ function wctrn_advanced_theme_widgets_init() {
 add_action( 'widgets_init', 'wctrn_advanced_theme_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue script e fogli di stile con la funzione get_theme_file_uri.
+ *
+ * @example examples/get-theme-file.php Come si è trasformato il codice per la funzione wp_enqueue_script()
+ * @example examples/loading-scripts-functions.php Esempi e descrizione delle nuove funzioni introdotte per il caricamento degli script.
  */
 function wctrn_advanced_theme_scripts() {
 	wp_enqueue_style( 'wctrn_advanced_theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'wctrn_advanced_theme-navigation', get_theme_file_uri('/js/navigation.js'), array(), '20151215', true );
+	wp_enqueue_script( 'wctrn_advanced_theme-navigation', get_theme_file_path('/js/navigation.js'), array(), '20151215', true );
 
 	wp_enqueue_script( 'wctrn_advanced_theme-skip-link-focus-fix', get_theme_file_uri('/js/skip-link-focus-fix.js'), array(), '20151215', true );
 
