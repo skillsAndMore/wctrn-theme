@@ -28,9 +28,9 @@
 
 			<?php
 			if ( get_header_image() ) {
-				echo get_header_image_tag( );
+				the_custom_header_markup();
 			}
-			
+
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>

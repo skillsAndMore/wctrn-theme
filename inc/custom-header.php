@@ -21,7 +21,7 @@
 function wctrn_advanced_theme_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'wctrn_advanced_theme_custom_header_args', array(
 		'default-image'          => '',
-		'header-text' => false,
+		'header-text' 			 => false,
 		'default-text-color'     => '000000',
 		'flex-width'			 => true,
 		'width'                  => 2000,
