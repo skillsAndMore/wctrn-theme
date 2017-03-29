@@ -27,6 +27,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Typography
 # Elements
 # Forms
+# Header
 # Navigation
 	## Links
 	## Menus
@@ -499,6 +500,12 @@ textarea {
 	width: 100%;
 }
 
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-title, .site-description{
+	margin-left: 30px;
+}
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
