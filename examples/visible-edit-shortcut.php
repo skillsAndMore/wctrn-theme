@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Codice NON FUNZIONANTE, devi agganciar alla relativa Action Hook customize_register per ottenere l'oggetto $wp_customize
+ * Codice NON FUNZIONANTE, devi agganciarti alla relativa Action Hook customize_register per ottenere l'oggetto $wp_customize
  *
  * Questo file presenta la possibilità di sfruttare le Selective Refresh per mostrare le Visible Edit Shortcut all'interno
  * del proprio tema.

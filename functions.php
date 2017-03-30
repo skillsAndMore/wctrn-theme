@@ -67,6 +67,75 @@ function wctrn_advanced_theme_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	/**
+	 * Aggiunto lo Starter Content che permette di popolare un'installazione "vergine" di WordPress con del contenuto
+	 * fittizio che aiuta l'utente a comprendere come poter configurare il proprio tema.
+	 *
+	 * @example examples/starter-content.php Descrizione completa del comando e delle sue funzionalita'
+	 * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/ Pagina di presentazione della funzionalita'
+	 */
+	 $starter_content = array(
+
+		//Inserisco Widget
+		'widgets' => array(
+		     //Specifico l'ID della sidebar da personalizzare, vedi functions.php:106
+		     'sidebar-1' => array(
+		         //Specifico l'ID della widget che voglio utilizzare, se non riconosciuto da WordPress devo specificare i valori contenuti
+		         'text_business_info', //Widget che fa parte dello Starter Content di default
+		         'my_text' => array( //Mia widget personale
+		             'title' => 'Ciao WordCamp Torino!!!',
+		             'text' => 'Bello questo Starter Content!'
+		         )
+		     )
+		),
+
+		//Inserisco Post
+		'posts' => array(
+		    'home', //Post che fa parte dello Starter Content di Default
+		    'wctrn' => array( //Post creato per il WordCamp Torino
+		        'post_type' => 'page',
+		        'post_title' => 'WordCamp Torino 2017',
+		        'post_content' => 'WordCamps are back in Italy!',
+		        'thumbnail' => '{{image-wctrn}}', //Posso specificare un'immagine in evidenza
+		        'template' => 'wctrn-page-template.php', //Posso specificare uno specifico template per questa pagina
+		    )
+		),
+
+		//Inserisco Allegati
+		'attachments' => array(
+	        'image-wctrn' => array( //Nota che e' lo stesso id che ho usato precedentemente come thumbnail
+	            'post_title' => 'WordCamp Torino',
+	            'file' => 'images/wctrn-hero-image.jpg'
+	        )
+	    ),
+
+		//Inserisco Menu Navigazione
+		'nav_menus' => array(
+	        'page_home' => array( //Creo un collegamento a una pagina esistente
+	            'type' => 'post_type',
+	            'object' => 'page',
+	            'object_id' => '{{home}}'
+	        ),
+	        'page_wctrn' => array(
+	            'type' => 'post_type',
+	            'object' => 'page',
+	            'object_id' => '{{wctrn}}'
+	        ),
+	        'link_sam' => array( //Inserisco un link esterno
+	            'title' => 'SkillsAndMore',
+	            'url' => 'https://skillsandmore.org'
+	        )
+	    ),
+
+		//Imposto Homepage
+		'options' => array(
+	        'show_on_front' => 'page', //Imposto una homepage statica
+	        'page_on_front' => '{{home}}',
+	        'page_for_posts' => '{{blog}}' //Prendo questa pagina dal contenuto di default in WordPress
+	    )
+ 	);
+	add_theme_support( 'starter-content', $starter_content );
 }
 endif;
 add_action( 'after_setup_theme', 'wctrn_advanced_theme_setup' );
