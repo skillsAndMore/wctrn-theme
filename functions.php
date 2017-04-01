@@ -65,6 +65,16 @@ function wctrn_advanced_theme_setup() {
 		'default-image' => '',
 	) ) );
 
+	$custom_logo = array(
+	    'height' => 100,
+	    'width' => 360,
+	    'flex-height' => true,
+	    'flex-width' => true,
+	    'header-text' => array( 'site-title', 'site-description')
+	);
+	add_theme_support( 'custom-logo', $custom_logo );
+
+
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -179,7 +189,7 @@ add_action( 'widgets_init', 'wctrn_advanced_theme_widgets_init' );
 function wctrn_advanced_theme_scripts() {
 	wp_enqueue_style( 'wctrn_advanced_theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'wctrn_advanced_theme-navigation', get_theme_file_path('/js/navigation.js'), array(), '20151215', true );
+	wp_enqueue_script( 'wctrn_advanced_theme-navigation', get_theme_file_uri('/js/navigation.js'), array(), '20151215', true );
 
 	wp_enqueue_script( 'wctrn_advanced_theme-skip-link-focus-fix', get_theme_file_uri('/js/skip-link-focus-fix.js'), array(), '20151215', true );
 
