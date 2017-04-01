@@ -7,7 +7,7 @@
  * tuo cliente o all'utente che utilizzera' la piattaforma di personalizzarla aggiungendo la propria Brand Identity.
  *
  * @link https://developer.wordpress.org/reference/hooks/type_template_hierarchy/ Pagina di presentazione della funzionalita'
- * @link https://make.wordpress.org/core/2016/11/03/post-type-templates-in-4-7/ Annuncio della funzionalita' in Make WordPress
+ * @link https://make.wordpress.org/core/2016/09/09/new-functions-hooks-and-behaviour-for-theme-developers-in-wordpress-4-7/ Annuncio della funzionalita' in Make WordPress
  */
 
 //Aggiungo un filtro inutile che aiuta a spiegare il funzionamento
