@@ -27,6 +27,7 @@ function wctrn_advanced_theme_custom_header_setup() {
 		'width'                  => 2000,
 		'height'                 => 250,
 		'flex-height'            => true,
+		'video'					 => true,
 		'wp-head-callback'       => 'wctrn_advanced_theme_header_style',
 	) ) );
 }
