@@ -11,7 +11,7 @@
  * @link https://make.wordpress.org/core/2016/11/10/visible-edit-shortcuts-in-the-customizer-preview/ Presentazione delle Visible Edit Shortcut in Make WordPress
  */
 
-//È importante assicurarsi che il transport sia impostato a postMessage
+// È importante assicurarsi che il transport sia impostato a postMessage
 $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
@@ -36,9 +36,9 @@ $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 /**
  * Aggiungo le funzioni specificate in `render_callback` quando abbiamo utilizzato il metodo add_partial()
  */
- function wctrn_advanced_theme_customize_partial_blogname(){
- 	bloginfo('name');
- }
- function wctrn_advanced_theme_customize_partial_blogdescription(){
- 	bloginfo('description');
- }
+function wctrn_advanced_theme_customize_partial_blogname(){
+	bloginfo('name');
+}
+function wctrn_advanced_theme_customize_partial_blogdescription(){
+	bloginfo('description');
+}
